@@ -134,6 +134,7 @@ namespace Testspace {
 			this->pytanie4->SuspendLayout();
 			this->pytanie5->SuspendLayout();
 			this->pytanie6->SuspendLayout();
+			this->przeliczaj->SuspendLayout();
 			this->SuspendLayout();
 
 
@@ -152,8 +153,11 @@ namespace Testspace {
 			this->components = gcnew System::ComponentModel::Container();
 			this->Size = System::Drawing::Size(600, 800);
 			this->Text = L"Test";
+			this->MaximizeBox = false;
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
+			this->Location = System::Drawing::Point(0, 200);
 			this->Controls->Add(this->pytanie1);
 			this->Controls->Add(this->pytanie2);
 			this->Controls->Add(this->pytanie3);
@@ -274,7 +278,7 @@ namespace Testspace {
 			this->p11->Name = L"p11";
 			this->p11->Size = System::Drawing::Size(30, 30);
 			this->p11->TabIndex = 0;
-			//this->p11->TabStop = true;
+			this->p11->TabStop = false;//deklaracja zaznaczenia rudiobuttona
 			this->p11->Text = L"1";//wartosc
 			this->p11->UseVisualStyleBackColor = true;
 
@@ -283,7 +287,7 @@ namespace Testspace {
 			this->p12->Name = L"p12";
 			this->p12->Size = System::Drawing::Size(30, 30);
 			this->p12->TabIndex = 0;
-			//this->p12->TabStop = true;
+			this->p12->TabStop = false;
 			this->p12->Text = L"2";//wartosc
 			this->p12->UseVisualStyleBackColor = true;
 
@@ -292,7 +296,7 @@ namespace Testspace {
 			this->p13->Name = L"p13";
 			this->p13->Size = System::Drawing::Size(30, 30);
 			this->p13->TabIndex = 0;
-			//this->p13->TabStop = true;
+			this->p13->TabStop = false;
 			this->p13->Text = L"3";//wartosc
 			this->p13->UseVisualStyleBackColor = true;
 
@@ -301,7 +305,7 @@ namespace Testspace {
 			this->p14->Name = L"p14";
 			this->p14->Size = System::Drawing::Size(30, 30);
 			this->p14->TabIndex = 0;
-			//this->p14->TabStop = true;
+			this->p14->TabStop = false;
 			this->p14->Text = L"4";//wartosc
 			this->p14->UseVisualStyleBackColor = true;
 		
@@ -310,7 +314,7 @@ namespace Testspace {
 			this->p15->Name = L"p15";
 			this->p15->Size = System::Drawing::Size(30, 30);
 			this->p15->TabIndex = 0;
-			//this->p15->TabStop = true;
+			this->p15->TabStop = false;
 			this->p15->Text = L"5";//wartosc
 			this->p15->UseVisualStyleBackColor = true;
 
@@ -328,7 +332,7 @@ namespace Testspace {
 			this->p21->Name = L"p21";
 			this->p21->Size = System::Drawing::Size(30, 30);
 			this->p21->TabIndex = 0;
-			//this->p21->TabStop = true;
+			this->p21->TabStop = false;
 			this->p21->Text = L"1";//wartosc
 			this->p21->UseVisualStyleBackColor = true;
 
@@ -337,7 +341,7 @@ namespace Testspace {
 			this->p22->Name = L"p22";
 			this->p22->Size = System::Drawing::Size(30, 30);
 			this->p22->TabIndex = 0;
-			//this->p22->TabStop = true;
+			this->p22->TabStop = false;
 			this->p22->Text = L"2";//wartosc
 			this->p22->UseVisualStyleBackColor = true;
 
@@ -346,7 +350,7 @@ namespace Testspace {
 			this->p23->Name = L"p23";
 			this->p23->Size = System::Drawing::Size(30, 30);
 			this->p23->TabIndex = 0;
-			//this->p23->TabStop = true;
+			this->p23->TabStop = false;
 			this->p23->Text = L"3";//wartosc
 			this->p23->UseVisualStyleBackColor = true;
 
@@ -355,7 +359,7 @@ namespace Testspace {
 			this->p24->Name = L"p24";
 			this->p24->Size = System::Drawing::Size(30, 30);
 			this->p24->TabIndex = 0;
-			//this->p24->TabStop = true;
+			this->p24->TabStop = false;
 			this->p24->Text = L"4";//wartosc
 			this->p24->UseVisualStyleBackColor = true;
 
@@ -364,7 +368,7 @@ namespace Testspace {
 			this->p25->Name = L"p25";
 			this->p25->Size = System::Drawing::Size(30, 30);
 			this->p25->TabIndex = 0;
-			//this->p25->TabStop = true;
+			this->p25->TabStop = false;
 			this->p25->Text = L"5";//wartosc
 			this->p25->UseVisualStyleBackColor = true;
 
@@ -382,7 +386,7 @@ namespace Testspace {
 			this->p31->Name = L"p31";
 			this->p31->Size = System::Drawing::Size(30, 30);
 			this->p31->TabIndex = 0;
-			//this->p31->TabStop = true;
+			this->p31->TabStop = false;
 			this->p31->Text = L"1";//wartosc
 			this->p31->UseVisualStyleBackColor = true;
 
@@ -391,7 +395,7 @@ namespace Testspace {
 			this->p32->Name = L"p32";
 			this->p32->Size = System::Drawing::Size(30, 30);
 			this->p32->TabIndex = 0;
-			//this->p32->TabStop = true;
+			this->p32->TabStop = false;
 			this->p32->Text = L"3";//wartosc
 			this->p32->UseVisualStyleBackColor = true;
 
@@ -400,7 +404,7 @@ namespace Testspace {
 			this->p33->Name = L"p33";
 			this->p33->Size = System::Drawing::Size(30, 30);
 			this->p33->TabIndex = 0;
-			//this->p33->TabStop = true;
+			this->p33->TabStop = false;
 			this->p33->Text = L"3";//wartosc
 			this->p33->UseVisualStyleBackColor = true;
 
@@ -409,7 +413,7 @@ namespace Testspace {
 			this->p34->Name = L"p34";
 			this->p34->Size = System::Drawing::Size(30, 30);
 			this->p34->TabIndex = 0;
-			//this->p34->TabStop = true;
+			this->p34->TabStop = false;
 			this->p34->Text = L"4";//wartosc
 			this->p34->UseVisualStyleBackColor = true;
 
@@ -418,7 +422,7 @@ namespace Testspace {
 			this->p35->Name = L"p35";
 			this->p35->Size = System::Drawing::Size(30, 30);
 			this->p35->TabIndex = 0;
-			//this->p35->TabStop = true;
+			this->p35->TabStop = false;
 			this->p35->Text = L"5";//wartosc
 			this->p35->UseVisualStyleBackColor = true;
 
@@ -436,7 +440,7 @@ namespace Testspace {
 			this->p41->Name = L"p41";
 			this->p41->Size = System::Drawing::Size(30, 30);
 			this->p41->TabIndex = 0;
-			//this->p31->TabStop = true;
+			this->p31->TabStop = false;
 			this->p41->Text = L"1";//wartosc
 			this->p41->UseVisualStyleBackColor = true;
 
@@ -445,7 +449,7 @@ namespace Testspace {
 			this->p42->Name = L"p42";
 			this->p42->Size = System::Drawing::Size(30, 30);
 			this->p42->TabIndex = 0;
-			//this->p32->TabStop = true;
+			this->p32->TabStop = false;
 			this->p42->Text = L"3";//wartosc
 			this->p42->UseVisualStyleBackColor = true;
 
@@ -454,7 +458,7 @@ namespace Testspace {
 			this->p43->Name = L"p43";
 			this->p43->Size = System::Drawing::Size(30, 30);
 			this->p43->TabIndex = 0;
-			//this->p33->TabStop = true;
+			this->p33->TabStop = false;
 			this->p43->Text = L"3";//wartosc
 			this->p43->UseVisualStyleBackColor = true;
 
@@ -463,7 +467,7 @@ namespace Testspace {
 			this->p44->Name = L"p44";
 			this->p44->Size = System::Drawing::Size(30, 30);
 			this->p44->TabIndex = 0;
-			//this->p34->TabStop = true;
+			this->p34->TabStop = false;
 			this->p44->Text = L"4";//wartosc
 			this->p44->UseVisualStyleBackColor = true;
 			
@@ -472,7 +476,7 @@ namespace Testspace {
 			this->p45->Name = L"p45";
 			this->p45->Size = System::Drawing::Size(30, 30);
 			this->p45->TabIndex = 0;
-			//this->p35->TabStop = true;
+			this->p35->TabStop = false;
 			this->p45->Text = L"5";//wartosc
 			this->p45->UseVisualStyleBackColor = true;
 
@@ -485,7 +489,7 @@ namespace Testspace {
 			this->p51->Name = L"p51";
 			this->p51->Size = System::Drawing::Size(30, 30);
 			this->p51->TabIndex = 0;
-			//this->p31->TabStop = true;
+			this->p31->TabStop = false;
 			this->p51->Text = L"1";//wartosc
 			this->p51->UseVisualStyleBackColor = true;
 
@@ -494,7 +498,7 @@ namespace Testspace {
 			this->p52->Name = L"p52";
 			this->p52->Size = System::Drawing::Size(30, 30);
 			this->p52->TabIndex = 0;
-			//this->p32->TabStop = true;
+			this->p32->TabStop = false;
 			this->p52->Text = L"3";//wartosc
 			this->p52->UseVisualStyleBackColor = true;
 
@@ -503,7 +507,7 @@ namespace Testspace {
 			this->p53->Name = L"p53";
 			this->p53->Size = System::Drawing::Size(30, 30);
 			this->p53->TabIndex = 0;
-			//this->p33->TabStop = true;
+			this->p33->TabStop = false;
 			this->p53->Text = L"3";//wartosc
 			this->p53->UseVisualStyleBackColor = true;
 
@@ -512,7 +516,7 @@ namespace Testspace {
 			this->p54->Name = L"p54";
 			this->p54->Size = System::Drawing::Size(30, 30);
 			this->p54->TabIndex = 0;
-			//this->p34->TabStop = true;
+			this->p34->TabStop = false;
 			this->p54->Text = L"4";//wartosc
 			this->p54->UseVisualStyleBackColor = true;
 
@@ -521,7 +525,7 @@ namespace Testspace {
 			this->p55->Name = L"p55";
 			this->p55->Size = System::Drawing::Size(30, 30);
 			this->p55->TabIndex = 0;
-			//this->p35->TabStop = true;
+			this->p35->TabStop = false;
 			this->p55->Text = L"5";//wartosc
 			this->p55->UseVisualStyleBackColor = true;
 
@@ -536,7 +540,7 @@ namespace Testspace {
 			this->p61->Name = L"p61";
 			this->p61->Size = System::Drawing::Size(30, 30);
 			this->p61->TabIndex = 0;
-			//this->p31->TabStop = true;
+			this->p31->TabStop = false;
 			this->p61->Text = L"1";//wartosc
 			this->p61->UseVisualStyleBackColor = true;
 
@@ -545,7 +549,7 @@ namespace Testspace {
 			this->p62->Name = L"p62";
 			this->p62->Size = System::Drawing::Size(30, 30);
 			this->p62->TabIndex = 0;
-			//this->p32->TabStop = true;
+			this->p32->TabStop = false;
 			this->p62->Text = L"3";//wartosc
 			this->p62->UseVisualStyleBackColor = true;
 
@@ -554,7 +558,7 @@ namespace Testspace {
 			this->p63->Name = L"p63";
 			this->p63->Size = System::Drawing::Size(30, 30);
 			this->p63->TabIndex = 0;
-			//this->p33->TabStop = true;
+			this->p33->TabStop = false;
 			this->p63->Text = L"3";//wartosc
 			this->p63->UseVisualStyleBackColor = true;
 
@@ -563,7 +567,7 @@ namespace Testspace {
 			this->p64->Name = L"p64";
 			this->p64->Size = System::Drawing::Size(30, 30);
 			this->p64->TabIndex = 0;
-			//this->p34->TabStop = true;
+			this->p34->TabStop = false;
 			this->p64->Text = L"4";//wartosc
 			this->p64->UseVisualStyleBackColor = true;
 
@@ -572,7 +576,7 @@ namespace Testspace {
 			this->p65->Name = L"p65";
 			this->p65->Size = System::Drawing::Size(30, 30);
 			this->p65->TabIndex = 0;
-			//this->p35->TabStop = true;
+			this->p35->TabStop = false;
 			this->p65->Text = L"5";//wartosc
 			this->p65->UseVisualStyleBackColor = true;
 
@@ -587,9 +591,20 @@ namespace Testspace {
 			this->przeliczaj->TabIndex = 1;
 			this->przeliczaj->Text = L"przelicz";
 			this->przeliczaj->UseVisualStyleBackColor = true;
-
+			this->przeliczaj->Click += gcnew System::EventHandler(this, &Test::przeliczaj_Click);
 
 		}
 #pragma endregion
+			/*if (this->p11->TabStop = true || this->p12->TabStop = true || this->p13->TabStop = true ||
+			this->p14->TabStop = true || this->p14->TabStop = true){*/
+			private: System::Void przeliczaj_Click(System::Object^  sender, System::EventArgs^  e){
+						
+						 Form^ wynik = gcnew Form;
+						 wynik->MaximizeBox = false;
+						 wynik->ShowDialog();
+					}
+	
+	//}
+		
 	};
 }

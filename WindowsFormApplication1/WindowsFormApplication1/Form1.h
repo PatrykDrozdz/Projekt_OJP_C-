@@ -69,6 +69,7 @@ namespace WindowsFormApplication1 {
 			// 
 			// test
 			// 
+			this->test->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->test->Location = System::Drawing::Point(234, 73);
 			this->test->Name = L"test";
 			this->test->Size = System::Drawing::Size(155, 56);
@@ -107,20 +108,18 @@ namespace WindowsFormApplication1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSize = true;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(547, 442);
 			this->Controls->Add(this->wyjœcie);
 			this->Controls->Add(this->help);
 			this->Controls->Add(this->test);
+			this->Location = System::Drawing::Point(700, 200);
+			this->MaximizeBox = false;
 			this->Name = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"Doggy test";
 			this->ResumeLayout(false);
-			//
-			
-
-			
-
-			
 
 		}
 #pragma endregion
@@ -137,19 +136,23 @@ namespace WindowsFormApplication1 {
 	}
 	//pomoc
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 Graphics^ tlo = this->CreateGraphics();
+				 Image^ ob = Image::FromFile("tlotest.jpg");
+				 tlo->DrawImage(ob, 325, 25);
+
 				 Form^ pomoc = gcnew Form;
 
 				 Label^ tekst_opis1 = gcnew Label;
 
-				 ImageList^ tlo = gcnew ImageList;
+				 
 
 				 
 				 pomoc->Width = 600;
 				 pomoc->Height = 600;
 				 pomoc->Text = "O programie";
-
-				 //tlo->Images->
-				 //pomoc->BackgroundImage = "t³o test.jpg";;
+				 pomoc->MaximizeBox = false;
+				
 
 				 tekst_opis1->Location = Point((pomoc->Width)/4, (pomoc->Height) / 2);
 				 tekst_opis1->Width = pomoc->Width / 2;
@@ -160,6 +163,7 @@ namespace WindowsFormApplication1 {
 
 				 pomoc->ShowDialog();
 	}
+	//otworz okno testu
 	private: System::Void test_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //Form^ test = gcnew Form;
 				 Testspace::Test ^ test = gcnew Testspace::Test;
