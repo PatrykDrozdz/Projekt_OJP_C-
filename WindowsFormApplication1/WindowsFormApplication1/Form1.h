@@ -1,5 +1,8 @@
 #pragma once
+
 #include"test.h"
+#include"pomoc1.h"
+
 namespace WindowsFormApplication1 {
 
 	using namespace System;
@@ -110,6 +113,7 @@ namespace WindowsFormApplication1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(547, 442);
 			this->Controls->Add(this->wyjœcie);
 			this->Controls->Add(this->help);
@@ -123,13 +127,7 @@ namespace WindowsFormApplication1 {
 
 		}
 #pragma endregion
-		//char **tlo_pomoc = (char**)malloc(1 * sizeof(char*));
-
 		
-
-		//tlo_pomoc[0] = "t³o test.jpg";
-
-		//ImageList
 	//zamknij
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			Close();
@@ -137,11 +135,9 @@ namespace WindowsFormApplication1 {
 	//pomoc
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 Graphics^ tlo = this->CreateGraphics();
-				 Image^ ob = Image::FromFile("tlotest.jpg");
-				 tlo->DrawImage(ob, 325, 25);
+				 WindowsFormApplication1::Pomoc^ pomoc = gcnew WindowsFormApplication1::Pomoc;
 
-				 Form^ pomoc = gcnew Form;
+				/* Form^ pomoc = gcnew Form;
 
 				 Label^ tekst_opis1 = gcnew Label;
 
@@ -161,12 +157,16 @@ namespace WindowsFormApplication1 {
 
 				 pomoc->Controls->Add(tekst_opis1);
 
+				/* Graphics^ pomoc = this->CreateGraphics();
+				 Image^ ob = Image::FromFile("tlotest.jpg");
+				 pomoc->DrawImage(ob, 325, 25);*/
+
 				 pomoc->ShowDialog();
 	}
 	//otworz okno testu
 	private: System::Void test_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //Form^ test = gcnew Form;
-				 Testspace::Test ^ test = gcnew Testspace::Test;
+				 WindowsFormApplication1::Test ^ test = gcnew WindowsFormApplication1::Test;
 				 
 				 test->ShowDialog();
 				
