@@ -12,24 +12,18 @@ namespace WindowsFormApplication1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for Form1
-	/// </summary>
+	
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
 		Form1(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+			
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
+		
 		
 		~Form1()
 		{
@@ -41,7 +35,7 @@ namespace WindowsFormApplication1 {
 	private: System::Windows::Forms::Button^  test;
 	private: System::Windows::Forms::Button^  help;
 	private: System::Windows::Forms::Button^  wyjœcie;
-	private: System::Windows::Forms::ImageList^  imageList1;
+
 	private: System::ComponentModel::IContainer^  components;
 	protected:
 
@@ -50,24 +44,17 @@ namespace WindowsFormApplication1 {
 
 
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
+		
 
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+		
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->test = (gcnew System::Windows::Forms::Button());
 			this->help = (gcnew System::Windows::Forms::Button());
 			this->wyjœcie = (gcnew System::Windows::Forms::Button());
-			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->SuspendLayout();
 			// 
 			// test
@@ -101,12 +88,6 @@ namespace WindowsFormApplication1 {
 			this->wyjœcie->UseVisualStyleBackColor = true;
 			this->wyjœcie->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
 			// 
-			// imageList1
-			// 
-			this->imageList1->ColorDepth = System::Windows::Forms::ColorDepth::Depth8Bit;
-			this->imageList1->ImageSize = System::Drawing::Size(16, 16);
-			this->imageList1->TransparentColor = System::Drawing::Color::Transparent;
-			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -137,35 +118,11 @@ namespace WindowsFormApplication1 {
 
 				 WindowsFormApplication1::Pomoc^ pomoc = gcnew WindowsFormApplication1::Pomoc;
 
-				/* Form^ pomoc = gcnew Form;
-
-				 Label^ tekst_opis1 = gcnew Label;
-
-				 
-
-				 
-				 pomoc->Width = 600;
-				 pomoc->Height = 600;
-				 pomoc->Text = "O programie";
-				 pomoc->MaximizeBox = false;
-				
-
-				 tekst_opis1->Location = Point((pomoc->Width)/4, (pomoc->Height) / 2);
-				 tekst_opis1->Width = pomoc->Width / 2;
-				 tekst_opis1->Height = pomoc->Height / 2;
-				 tekst_opis1->Text = "Aplikacja, która ma na celu ustalenie, jaka rasa psa pasuje do Ciebie najbardziej. Program dzia³a na zasadzie ankiety: wypelnia siê ""radiobuttony"" z liczbami 1-5 Bêdzie to ocena pod wzglêdem: inteligencji, aktywnoœci, strózowania, obrony, potrzeb socjalnych psa oraz tresowalnoœci. Mi³ego testu :)";
-
-				 pomoc->Controls->Add(tekst_opis1);
-
-				/* Graphics^ pomoc = this->CreateGraphics();
-				 Image^ ob = Image::FromFile("tlotest.jpg");
-				 pomoc->DrawImage(ob, 325, 25);*/
-
 				 pomoc->ShowDialog();
 	}
 	//otworz okno testu
 	private: System::Void test_Click(System::Object^  sender, System::EventArgs^  e) {
-				 //Form^ test = gcnew Form;
+				 
 				 WindowsFormApplication1::Test ^ test = gcnew WindowsFormApplication1::Test;
 				 
 				 test->ShowDialog();

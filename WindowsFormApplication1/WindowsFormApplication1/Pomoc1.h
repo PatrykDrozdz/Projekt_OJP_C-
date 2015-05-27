@@ -34,7 +34,18 @@ namespace WindowsFormApplication1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  opis;
+	protected:
+
+	protected:
+
+
+	protected:
+
+
+	protected:
+
+
 	protected:
 
 	private:
@@ -50,25 +61,24 @@ namespace WindowsFormApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Pomoc::typeid));
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->opis = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// label1
+			// opis
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(120, 306);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(311, 65);
-			this->label1->TabIndex = 0;
-			this->label1->Text = "Aplikacja, która ma na celu ustalenie, jaka rasa psa\n pasuje do Ciebie najbardziej.Program dzia³a na zasadzie ankiety :\nwypelnia siê radiobuttony z liczbami 1 - 5 Bêdzie to ocena pod\nwzglêdem : inteligencji, aktywnoœci, strózowania, obrony, potrzeb\nsocjalnych psa oraztresowalnoœci.Mi³ego testu : )";
+			this->opis->AutoSize = true;
+			this->opis->Location = System::Drawing::Point(149, 326);
+			this->opis->Name = L"opis";
+			this->opis->Size = System::Drawing::Size(35, 13);
+			this->opis->TabIndex = 0;
+			this->opis->Text = "Aplikacja, która ma na celu ustalenie, jaka rasa psa\npasuje do Ciebie najbardziej.Program dzia³a na zasadzie ankiety :\nwypelnia siê radiobuttony z liczbami 1 - 5 Bêdzie to ocena pod\nwzglêdem : inteligencji, aktywnoœci, strózowania, obrony, potrzeb\nsocjalnych psa oraztresowalnoœci.Mi³ego testu : )";
 			// 
 			// Pomoc
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(611, 498);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->opis);
 			this->MaximizeBox = false;
 			this->Name = L"Pomoc";
 			this->Text = L"Pomoc";
