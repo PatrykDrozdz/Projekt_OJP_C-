@@ -61,17 +61,20 @@ namespace WindowsFormApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Pomoc::typeid));
 			this->opis = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// opis
 			// 
 			this->opis->AutoSize = true;
+			this->opis->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->opis->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->opis->Location = System::Drawing::Point(149, 326);
 			this->opis->Name = L"opis";
-			this->opis->Size = System::Drawing::Size(35, 13);
+			this->opis->Size = System::Drawing::Size(314, 65);
 			this->opis->TabIndex = 0;
-			this->opis->Text = "Aplikacja, która ma na celu ustalenie, jaka rasa psa\npasuje do Ciebie najbardziej.Program dzia³a na zasadzie ankiety :\nwypelnia siê radiobuttony z liczbami 1 - 5 Bêdzie to ocena pod\nwzglêdem : inteligencji, aktywnoœci, strózowania, obrony, potrzeb\nsocjalnych psa oraztresowalnoœci.Mi³ego testu : )";
+			this->opis->Text = resources->GetString(L"opis.Text");
 			// 
 			// Pomoc
 			// 

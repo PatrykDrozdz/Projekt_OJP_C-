@@ -60,6 +60,7 @@ namespace WindowsFormApplication1 {
 			// test
 			// 
 			this->test->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->test->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->test->Location = System::Drawing::Point(234, 73);
 			this->test->Name = L"test";
 			this->test->Size = System::Drawing::Size(155, 56);
@@ -70,6 +71,7 @@ namespace WindowsFormApplication1 {
 			// 
 			// help
 			// 
+			this->help->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->help->Location = System::Drawing::Point(234, 177);
 			this->help->Name = L"help";
 			this->help->Size = System::Drawing::Size(155, 60);
@@ -80,6 +82,7 @@ namespace WindowsFormApplication1 {
 			// 
 			// wyjœcie
 			// 
+			this->wyjœcie->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->wyjœcie->Location = System::Drawing::Point(234, 263);
 			this->wyjœcie->Name = L"wyjœcie";
 			this->wyjœcie->Size = System::Drawing::Size(155, 64);
@@ -93,9 +96,11 @@ namespace WindowsFormApplication1 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(547, 442);
+			this->ClientSize = System::Drawing::Size(584, 462);
 			this->Controls->Add(this->wyjœcie);
 			this->Controls->Add(this->help);
 			this->Controls->Add(this->test);
