@@ -74,7 +74,7 @@ namespace WindowsFormApplication1 {
 			this->opis->Name = L"opis";
 			this->opis->Size = System::Drawing::Size(314, 65);
 			this->opis->TabIndex = 0;
-			this->opis->Text = resources->GetString(L"opis.Text");
+			this->opis->Text = "Aplikacja, która ma na celu ustalenie, jaka rasa psa\npasuje do Ciebie najbardziej.Program dzia³a na zasadzie ankiety :\nwypelnia siê radiobuttony z liczbami 1 - 5 Bêdzie to ocena pod\nwzglêdem : inteligencji, aktywnoœci, strózowania, obrony, potrzeb\nsocjalnych psa oraztresowalnoœci.Mi³ego testu : )";
 			// 
 			// Pomoc
 			// 

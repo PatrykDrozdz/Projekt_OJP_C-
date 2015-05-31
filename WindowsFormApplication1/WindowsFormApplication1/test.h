@@ -742,9 +742,9 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 
 
 				 //labrador
-				 System::Double lab_activity = 5;
+				 System::Double lab_activity = 4;
 				 System::Double  lab_watch = 3;
-				 System::Double  lab_guard = 2;
+				 System::Double  lab_guard = 3;
 				 System::Double  lab_intelligance = 5;
 				 System::Double  lab_trainability = 5;
 				 System::Double  lab_social_needs = 5;
@@ -805,14 +805,49 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 				 System::Double	 rot;
 
 				 //Golden Retriever
-				 System::Double  golden_activity = 5;
-				 System::Double  golden_watch = 2;
+				 System::Double  golden_activity = 3;
+				 System::Double  golden_watch = 1;
 				 System::Double  golden_guard = 1;
 				 System::Double  golden_intelligance = 5;
 				 System::Double  golden_trainability = 5;
 				 System::Double  golden_social_needs = 5;
 				 System::Double	 golden;
+				 ///dzisiaj dodane
+				 //Border Collie
+				 System::Double  bcoli_activity = 5;
+				 System::Double  bcoli_watch = 2;
+				 System::Double  bcoli_guard = 1;
+				 System::Double  bcoli_intelligance = 5;
+				 System::Double  bcoli_trainability = 5;
+				 System::Double  bcoli_social_needs = 4;
+				 System::Double	 bcoli;
 
+				 //York
+				 System::Double  york_activity = 5;
+				 System::Double  york_watch = 3;
+				 System::Double  york_guard = 3;
+				 System::Double  york_intelligance = 3;
+				 System::Double  york_trainability = 3;
+				 System::Double  york_social_needs = 3;
+				 System::Double	 york;
+
+				 //Buldog Francuski
+				 System::Double  bulf_activity = 3;
+				 System::Double  bulf_watch = 3;
+				 System::Double  bulf_guard = 3;
+				 System::Double  bulf_intelligance = 3;
+				 System::Double  bulf_trainability = 3;
+				 System::Double  bulf_social_needs = 4;
+				 System::Double	 bulf;
+
+				 //beagle
+				 System::Double  beagle_activity = 5;
+				 System::Double  beagle_watch = 3;
+				 System::Double  beagle_guard = 2;
+				 System::Double  beagle_intelligance = 2;
+				 System::Double  beagle_trainability = 1;
+				 System::Double  beagle_social_needs = 4;
+				 System::Double	 beagle;
 
 
 				 lab = 100 - ((abs(lab_activity - hact) + abs(lab_guard - hguard) + abs(lab_watch - hwatch) + abs(lab_intelligance - hintel) + abs(lab_trainability - htrain) + abs(lab_social_needs - hsoc)) / 6) * 100;
@@ -823,6 +858,10 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 				 bulterier = 100 - ((abs(bulterier_activity - hact) + abs(bulterier_guard - hguard) + abs(bulterier_watch - hwatch) + abs(bulterier_intelligance - hintel) + abs(bulterier_trainability - htrain) + abs(bulterier_social_needs - hsoc)) / 6) * 100;
 				 rot = 100 - ((abs(rot_activity - hact) + abs(rot_guard - hguard) + abs(rot_watch - hwatch) + abs(rot_intelligance - hintel) + abs(rot_trainability - htrain) + abs(rot_social_needs - hsoc)) / 6) * 100;
 				 golden = 100 - ((abs(golden_activity - hact) + abs(golden_guard - hguard) + abs(golden_watch - hwatch) + abs(golden_intelligance - hintel) + abs(golden_trainability - htrain) + abs(golden_social_needs - hsoc)) / 6) * 100;
+				 bcoli = 100 - ((abs(bcoli_activity - hact) + abs(bcoli_guard - hguard) + abs(bcoli_watch - hwatch) + abs(bcoli_intelligance - hintel) + abs(bcoli_trainability - htrain) + abs(bcoli_social_needs - hsoc)) / 6) * 100;
+				 york = 100 - ((abs(york_activity - hact) + abs(york_guard - hguard) + abs(york_watch - hwatch) + abs(york_intelligance - hintel) + abs(york_trainability - htrain) + abs(york_social_needs - hsoc)) / 6) * 100;
+				 bulf = 100 - ((abs(bulf_activity - hact) + abs(bulf_guard - hguard) + abs(bulf_watch - hwatch) + abs(bulf_intelligance - hintel) + abs(bulf_trainability - htrain) + abs(bulf_social_needs - hsoc)) / 6) * 100;
+				 beagle = 100 - ((abs(beagle_activity - hact) + abs(beagle_guard - hguard) + abs(beagle_watch - hwatch) + abs(beagle_intelligance - hintel) + abs(beagle_trainability - htrain) + abs(beagle_social_needs - hsoc)) / 6) * 100;
 
 				 if (!hact || !hguard || !hwatch || !hintel || !htrain || !hsoc)
 				 {
@@ -832,7 +871,8 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 				 }
 				 else{
 					 //lab
-					 if (lab > pug && lab > german && lab > azjata && lab > kaukaz && lab > bulterier && lab > rot && lab > golden){
+					 if (lab > pug && lab > german && lab > azjata && lab > kaukaz && lab > bulterier && 
+						 lab > rot && lab > golden && lab>bcoli && lab>york && lab>bulf && lab>beagle){
 
 
 
@@ -850,7 +890,7 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 okno->Height = 300;
 
 						 tekst->Location = Point(40, 40);
-						 tekst->Text = "Labrador retriever\n\n";
+						 tekst->Text = "Labrador retriever\n\nWychodowany na Nowej Funlandii, zwany wczeœniej Psem œw. Jana, przez rybaków do\nwyci¹gania sieci i niejednokrotnie te¿ ludzi. W roku 1870 trafi³ do Europy. Jego nazwa\npochodzi od morza labradorskiego.\nPies ten posiada niezwyk³e weso³e, ³agodne i przyjazne usposobienie. Jest niezwykle\ninteligentny, jako ¿e jest aporterem, uwielbia to zajêcie. Jest œwietnym psem\nrodzinnym, je¿eli zaspokoi siê jego potrzeby pracy oraz towarzyskie, a po odpowiednim\nszkoleniu i ogromnej pracy w³aœciciela mo¿e te¿ byæ dobrym stró¿em i obroñc¹.";
 
 						 //ustawianie kolrów tekstu
 						 if (lab <= 25){
@@ -897,7 +937,8 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
 					 }//pug
-					 else if (pug > lab && pug > german && pug > azjata && pug > kaukaz && pug > bulterier && pug > rot && pug > golden){
+					 else if (pug > lab && pug > german && pug > azjata && pug > kaukaz && pug > bulterier && 
+						 pug > rot && pug > golden && pug>bcoli && pug>york && pug>bulf && pug>beagle){
 
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
@@ -914,7 +955,7 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 okno->Height = 300;
 
 						 tekst->Location = Point(40, 40);
-						 tekst->Text = "Mops";
+						 tekst->Text = "Mops\n\nRasa powsta³a najprawdopodobniej w Chinach ok. 1000 lat temu.\nMopsa mo¿na okreœliæ jako najlepszego, niewymagaj¹cego psa towarzysza, który idealnie\nnadaje siê do miasta. Nie jest on szczególnie aktywny, nie wymaga d³ugich spacerów.\n Jednak ³atwo mo¿e siê dostosowaæ do ¿ycia rodzinnego i mo¿na\ngo zabraæ nie mal wszêdzie. Ot idealny towarzysz ka¿dego cz³owieka:)";
 
 						 //ustawianie kolrów tekstu
 						 if (pug <= 25){
@@ -961,7 +1002,9 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
 					 }//german
-					 else if (german > lab && german > pug && german > azjata && german > kaukaz && german > bulterier && german > rot && german > golden){
+					 else if (german > lab && german > pug && german > azjata && german > kaukaz && 
+						 german > bulterier && german > rot && german > golden && german>bcoli && 
+						 german>york && german>bulf && german>beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1025,7 +1068,9 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
 					 }//azjata
-					 else if (azjata > lab && azjata > pug && azjata > german && azjata > kaukaz && azjata > bulterier && azjata > rot && azjata > golden){
+					 else if (azjata > lab && azjata > pug && azjata > german && azjata > kaukaz && 
+						 azjata > bulterier && azjata > rot && azjata > golden && azjata>bcoli && 
+						 azjata>york && azjata>bulf && azjata>beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1089,7 +1134,9 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
 					 }//kaukaz
-					 else if (kaukaz > lab && kaukaz > pug && kaukaz > german && kaukaz > azjata && kaukaz > bulterier && kaukaz > rot && kaukaz > golden){
+					 else if (kaukaz > lab && kaukaz > pug && kaukaz > german && kaukaz > azjata && 
+						 kaukaz > bulterier && kaukaz > rot && kaukaz > golden && kaukaz>bcoli && 
+						 kaukaz>york && kaukaz>bulf && kaukaz>beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1152,7 +1199,9 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
 					 }//bullterier
-					 else if (bulterier > lab && bulterier > pug && bulterier > german && bulterier > azjata && bulterier > kaukaz && bulterier > rot && bulterier > golden){
+					 else if (bulterier > lab && bulterier > pug && bulterier > german && 
+						 bulterier > azjata && bulterier > kaukaz && bulterier > rot && bulterier > golden && 
+						 bulterier>bcoli && bulterier>york && bulterier>bulf && bulterier>beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1213,8 +1262,10 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MaximumSize = System::Drawing::Size(480, 200);
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 
-					 }
-					 else if (rot > lab && rot > pug && rot > german && rot > azjata && rot > kaukaz && rot > bulterier && rot > golden){
+					 }//rottweiler
+					 else if (rot > lab && rot > pug && rot > german && rot > azjata && rot > kaukaz && 
+						 rot > bulterier && rot > golden && rot>bcoli && rot>york && 
+						 rot>bulf && rot>beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1275,8 +1326,10 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MaximumSize = System::Drawing::Size(480, 200);
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 						 this->MinimumSize = System::Drawing::Size(700, 132);
-					 }
-					 else if (golden > lab && golden > pug && golden > german && golden > azjata && golden > kaukaz && golden > bulterier && golden > rot){
+					 }//golden
+					 else if (golden > lab && golden > pug && golden > german && golden > azjata && 
+						 golden > kaukaz && golden > bulterier && golden > rot && golden>bcoli && 
+						 golden>york && golden>bulf && golden > beagle){
 						 Form^ okno = gcnew Form;
 						 Label^ tekst = gcnew Label;
 
@@ -1337,11 +1390,282 @@ private: System::Void p65_CheckedChanged(System::Object^  sender, System::EventA
 						 this->MinimumSize = System::Drawing::Size(480, 200);
 						 
 
+					 }//Border Collie
+					 else if (bcoli > pug && bcoli > german && bcoli > azjata && bcoli  > kaukaz && 
+						 bcoli  > bulterier && bcoli  > rot && bcoli > golden && bcoli >lab && bcoli >york && 
+						 bcoli >bulf && bcoli>beagle){
+
+
+
+						 Form^ okno = gcnew Form;
+						 Label^ tekst = gcnew Label;
+
+						 Label^ wynik = gcnew Label;
+
+
+						 wynik->Location = Point((okno->Width / 2) - 50, (okno->Height / 2) - 50);
+						 wynik->Text = bcoli.ToString();
+						 okno->Controls->Add(wynik);
+
+						 okno->Width = 300;
+						 okno->Height = 300;
+
+						 tekst->Location = Point(40, 40);
+						 tekst->Text = "Border Collie\n\nparawdopodobnie najinteligentniejsza rasa psów na œwiecie. Wywodzi siê z rejonu Border,\nna granicy Angli i Szkocji.\nCzêsto s¹ to psy aktywne, wymagaj¹ce wiele uwagi oraz ruchu. Zdecydowanie poleca\nsie jedla rodzin aktywnych lub osób, które chc¹ uczestniczyæ w dyscyplinach\nkynologicznych. W przeciwnym wypadku mog¹ same znaj¹c sobie zajêcie jak np.\nniszczenie, zaganianie i podgryzanie dzieci. Dlatego nale¿y pamiêtaæ, ¿e pracuj¹cy\nBorder to szczêœliwy Border:)";
+
+						 //ustawianie kolrów tekstu
+						 if (bcoli <= 25){
+							 wynik->ForeColor = System::Drawing::Color::Red;
+							 wynik->BackColor = System::Drawing::Color::Black;
+
+						 }
+						 else if (bcoli > 25 && bcoli <= 50){
+							 wynik->ForeColor = System::Drawing::Color::Orange;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (bcoli >= 51 && bcoli <= 74){
+							 wynik->ForeColor = System::Drawing::Color::Yellow;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (bcoli >= 75 && bcoli <= 100){
+							 wynik->ForeColor = System::Drawing::Color::Green;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+
+						 //zwracanie do okna pierwotnego
+						 Button^ przeslij = gcnew Button;
+						 Label^ podpis = gcnew Label;
+
+						 podpis->Location = Point((okno->Width / 2) - 50, (okno->Height / 4) - 10);
+						 podpis->Width = 100;
+						 podpis->Height = 50;
+						 podpis->Text = "Uzyskany wspó³czynnik:";
+						 okno->Controls->Add(podpis);
+
+						 przeslij->Width = 110;
+						 przeslij->Height = 50;
+						 przeslij->Location = Point(okno->Width / 2, 200);
+						 przeslij->Text = "Zobacz wybor";
+						 okno->Controls->Add(przeslij);
+
+						 przeslij->DialogResult = System::Windows::Forms::DialogResult::OK;
+
+						 okno->ShowDialog();
+						 opis_rasy->Text = tekst->Text;
+						 this->Width = 480;
+						 this->Height = 200;
+						 this->MaximumSize = System::Drawing::Size(480, 200);
+						 this->MinimumSize = System::Drawing::Size(480, 200);
+
+					 }//York
+					 else if (york > pug && york > german && york > azjata && york > kaukaz && 
+						 york  > bulterier && york > rot && york > golden && york >lab && york>bcoli && 
+						 york >bulf && york>beagle){
+
+
+
+						 Form^ okno = gcnew Form;
+						 Label^ tekst = gcnew Label;
+
+						 Label^ wynik = gcnew Label;
+
+
+						 wynik->Location = Point((okno->Width / 2) - 50, (okno->Height / 2) - 50);
+						 wynik->Text = york.ToString();
+						 okno->Controls->Add(wynik);
+
+						 okno->Width = 300;
+						 okno->Height = 300;
+
+						 tekst->Location = Point(40, 40);
+						 tekst->Text = "Yorkshire Terrier\n\nWychodowane w po³owie wieku XIX-go do têpienia myszy i szczurów.\nObecnie jest to jeden z najpopularniejszych psów towarzysz¹cych/rodzinnych.\nS¹ to psy z regu³y przyjazne wobec rodziny, ale nie ufne wobec obcych. Pomimo swoich\nniewielkich rozmiarów nie nale¿y zapominaæ, ¿e to teriery z krwi i koœci, które maj¹ swój\ncharakter i mog¹ chcieæ postawiæ na swoim. Za to ze wzglêdu na swój niewielki rozmiar,\nœwietnie nadaj¹ siê do miasta. Nie nale¿y jednak zapominaæ, ¿e powinnyc chodziæ po ziemi.\nNale¿y je równie¿ wczeœnie socjalizowaæ, gdy¿ ze wzglêdu na rozmiar, mog¹ œwiat i inne\npsy mog¹ wydawaæ siê im niebezpieczne, a to mo¿e prowadziæ do lêku.";
+
+						 //ustawianie kolrów tekstu
+						 if (york <= 25){
+							 wynik->ForeColor = System::Drawing::Color::Red;
+							 wynik->BackColor = System::Drawing::Color::Black;
+
+						 }
+						 else if (york > 25 && york <= 50){
+							 wynik->ForeColor = System::Drawing::Color::Orange;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (york >= 51 && york <= 74){
+							 wynik->ForeColor = System::Drawing::Color::Yellow;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (york >= 75 && york <= 100){
+							 wynik->ForeColor = System::Drawing::Color::Green;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+
+						 //zwracanie do okna pierwotnego
+						 Button^ przeslij = gcnew Button;
+						 Label^ podpis = gcnew Label;
+
+						 podpis->Location = Point((okno->Width / 2) - 50, (okno->Height / 4) - 10);
+						 podpis->Width = 100;
+						 podpis->Height = 50;
+						 podpis->Text = "Uzyskany wspó³czynnik:";
+						 okno->Controls->Add(podpis);
+
+						 przeslij->Width = 110;
+						 przeslij->Height = 50;
+						 przeslij->Location = Point(okno->Width / 2, 200);
+						 przeslij->Text = "Zobacz wybor";
+						 okno->Controls->Add(przeslij);
+
+						 przeslij->DialogResult = System::Windows::Forms::DialogResult::OK;
+
+						 okno->ShowDialog();
+						 opis_rasy->Text = tekst->Text;
+						 this->Width = 480;
+						 this->Height = 200;
+						 this->MaximumSize = System::Drawing::Size(480, 200);
+						 this->MinimumSize = System::Drawing::Size(480, 200);
+
+					 }//Buldog francuski
+					 else if (bulf > pug && bulf > german && bulf > azjata && bulf > kaukaz && 
+						 bulf  > bulterier && bulf> rot && bulf> golden && bulf >lab && 
+						 bulf>bcoli &&  bulf>york && bulf>beagle){
+
+
+
+						 Form^ okno = gcnew Form;
+						 Label^ tekst = gcnew Label;
+
+						 Label^ wynik = gcnew Label;
+
+
+						 wynik->Location = Point((okno->Width / 2) - 50, (okno->Height / 2) - 50);
+						 wynik->Text = bulf.ToString();
+						 okno->Controls->Add(wynik);
+
+						 okno->Width = 300;
+						 okno->Height = 300;
+
+						 tekst->Location = Point(40, 40);
+						 tekst->Text = "Buldog Francuski\n\nFrancuski piesek wywyodz¹cy siê od swojego angielskiego kuzyna. Wychodowany przez\nnajni¿sze warstwy spo³eczne we Francji.\nJest to typowy kanapowiec. Bardzo lubi odpoczywaæ razem z w³aœcicielami na kanapie,\nchoæ czasem potrafi byæ aktywny. Lubi towarzystwo innych zwierz¹t, dobrze u³ozony,\njest tolerancyjny wobec dzieci. W tresurze bywa uparty.\nNiestety ze wzglêdu na swoj¹ krótk¹ kufê, jest nara¿on zarówno na\nprzegrzanie jak i na wyziêbienie.";
+
+						 //ustawianie kolrów tekstu
+						 if (bulf <= 25){
+							 wynik->ForeColor = System::Drawing::Color::Red;
+							 wynik->BackColor = System::Drawing::Color::Black;
+
+						 }
+						 else if (bulf > 25 && bulf<= 50){
+							 wynik->ForeColor = System::Drawing::Color::Orange;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (bulf >= 51 && bulf <= 74){
+							 wynik->ForeColor = System::Drawing::Color::Yellow;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (bulf >= 75 && bulf <= 100){
+							 wynik->ForeColor = System::Drawing::Color::Green;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+
+						 //zwracanie do okna pierwotnego
+						 Button^ przeslij = gcnew Button;
+						 Label^ podpis = gcnew Label;
+
+						 podpis->Location = Point((okno->Width / 2) - 50, (okno->Height / 4) - 10);
+						 podpis->Width = 100;
+						 podpis->Height = 50;
+						 podpis->Text = "Uzyskany wspó³czynnik:";
+						 okno->Controls->Add(podpis);
+
+						 przeslij->Width = 110;
+						 przeslij->Height = 50;
+						 przeslij->Location = Point(okno->Width / 2, 200);
+						 przeslij->Text = "Zobacz wybor";
+						 okno->Controls->Add(przeslij);
+
+						 przeslij->DialogResult = System::Windows::Forms::DialogResult::OK;
+
+						 okno->ShowDialog();
+						 opis_rasy->Text = tekst->Text;
+						 this->Width = 480;
+						 this->Height = 200;
+						 this->MaximumSize = System::Drawing::Size(480, 200);
+						 this->MinimumSize = System::Drawing::Size(480, 200);
+
 					 }
+					 //bealgle
+					 else if (beagle > pug && beagle > german && beagle > azjata && beagle > kaukaz &&
+						 beagle  > bulterier && beagle> rot && beagle> golden && beagle >lab &&
+						 beagle>bcoli &&  beagle>york && beagle>bulf){
 
 
 
+						 Form^ okno = gcnew Form;
+						 Label^ tekst = gcnew Label;
 
+						 Label^ wynik = gcnew Label;
+
+
+						 wynik->Location = Point((okno->Width / 2) - 50, (okno->Height / 2) - 50);
+						 wynik->Text = beagle.ToString();
+						 okno->Controls->Add(wynik);
+
+						 okno->Width = 300;
+						 okno->Height = 300;
+
+						 tekst->Location = Point(40, 40);
+						 tekst->Text = "Beagle\n\nRasa psów goñczych powsta³a w Angli ok. XIV wieku, wywodz¹ca siê prawdopodobnie\nod Harrierów i Terierów\nObecnie jest to jedne z najpopularniejszych psów rodzinnych.\nSta³o siê tag ze wzglêdu na jego przyjazny charakter oraz sk³onnoœæ do zabawy i niekiedy\ntowarzyskoœæ. Bior¹c Beagla nie nale¿y zapominaæ i¿ jest to pies mysliwski, który wymaga\nruchuoraz pracy.Nalezy jescze pamiêtaæ, ¿e Beagle spuszczony na smyczy, ze wzglêdu na\nswój czu³y wêch, ucieknie";
+
+						 //ustawianie kolrów tekstu
+						 if (beagle <= 25){
+							 wynik->ForeColor = System::Drawing::Color::Red;
+							 wynik->BackColor = System::Drawing::Color::Black;
+
+						 }
+						 else if (beagle > 25 && beagle <= 50){
+							 wynik->ForeColor = System::Drawing::Color::Orange;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (beagle >= 51 && beagle <= 74){
+							 wynik->ForeColor = System::Drawing::Color::Yellow;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+						 else if (beagle >= 75 && beagle <= 100){
+							 wynik->ForeColor = System::Drawing::Color::Green;
+							 wynik->BackColor = System::Drawing::Color::Black;
+						 }
+
+						 //zwracanie do okna pierwotnego
+						 Button^ przeslij = gcnew Button;
+						 Label^ podpis = gcnew Label;
+
+						 podpis->Location = Point((okno->Width / 2) - 50, (okno->Height / 4) - 10);
+						 podpis->Width = 100;
+						 podpis->Height = 50;
+						 podpis->Text = "Uzyskany wspó³czynnik:";
+						 okno->Controls->Add(podpis);
+
+						 przeslij->Width = 110;
+						 przeslij->Height = 50;
+						 przeslij->Location = Point(okno->Width / 2, 200);
+						 przeslij->Text = "Zobacz wybor";
+						 okno->Controls->Add(przeslij);
+
+						 przeslij->DialogResult = System::Windows::Forms::DialogResult::OK;
+
+						 okno->ShowDialog();
+						 opis_rasy->Text = tekst->Text;
+						 this->Width = 480;
+						 this->Height = 200;
+						 this->MaximumSize = System::Drawing::Size(480, 200);
+						 this->MinimumSize = System::Drawing::Size(480, 200);
+
+					 }//gdy wyniki s¹ zerowe
+					 else if (bcoli<0 && york<0 && bulf<0 && beagle<0 && lab<0 && pug<0 && german<0 && 
+						 azjata<0 && kaukaz<0 && bulterier<0 && rot<0 && golden<0){
+						 System::Windows::Forms::DialogResult info;
+						 info = MessageBox::Show("Lepiej nie mieæ psa", "Wszystkie wyniki zerowe", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					 }
 
 
 				 }
